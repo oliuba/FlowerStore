@@ -1,0 +1,36 @@
+package flowers;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class FlowerTest {
+    private Flower flower;
+
+    @org.junit.jupiter.api.BeforeEach
+    void setUp() {
+        flower = new Flower(FlowerType.CHAMOMILE);
+        flower.setPrice(30);
+        flower.setColor(new int[]{170, 0, 255});
+        flower.setSepalLength(10);
+    }
+
+    @Test
+    void getFlowerType() {
+        assertEquals(FlowerType.CHAMOMILE, flower.getFlowerType());
+    }
+
+    @Test
+     void getPrice() {
+        assertEquals(30, flower.getPrice());
+    }
+
+    @Test
+    void getColor() {
+        assertArrayEquals(new int[]{170, 0, 255}, flower.getColor());
+    }
+
+    @Test
+    void getSepalLength() {
+        assertEquals(10, flower.getSepalLength());
+    }
+}
