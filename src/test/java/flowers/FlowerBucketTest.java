@@ -1,7 +1,5 @@
 package flowers;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class FlowerBucketTest {
@@ -21,7 +19,7 @@ class FlowerBucketTest {
         bucket = new FlowerBucket();
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void addFlowerPack() {
         bucket.addFlowerPack(pack1);
         bucket.addFlowerPack(pack2);
@@ -31,13 +29,13 @@ class FlowerBucketTest {
         assertEquals(pack3, bucket.getFlowerPacks().get(2));
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void getPrice() {
         addFlowerPack();
         assertEquals(650, bucket.getPrice());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void getFlowerPacks() {
         addFlowerPack();
         assertArrayEquals(new FlowerPack[] {pack1, pack2, pack3}, bucket.getFlowerPacks().toArray());

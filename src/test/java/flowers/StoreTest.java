@@ -1,7 +1,5 @@
 package flowers;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class StoreTest {
@@ -19,25 +17,25 @@ class StoreTest {
         store = new Store();
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void addBucket() {
         store.addBucket(bucket);
         assertEquals(bucket, store.getGoods().get("Bucket").get(0));
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void addPack() {
         store.addPack(pack);
         assertEquals(pack, store.getGoods().get("Pack").get(0));
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void addFlower() {
         store.addFlower(flower);
         assertEquals(flower, store.getGoods().get("Flower").get(0));
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void search() {
         addPack();
         Object gotPack = store.search("Pack").get(0);

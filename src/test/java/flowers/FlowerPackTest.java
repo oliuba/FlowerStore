@@ -1,7 +1,5 @@
 package flowers;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class FlowerPackTest {
@@ -17,17 +15,17 @@ class FlowerPackTest {
         pack.setAmount(9);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void price() {
         assertEquals(450, pack.price());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void getFlower() {
         assertEquals(flower, pack.getFlower());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void getAmount() {
         assertEquals(9, pack.getAmount());
     }
