@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>lab5.1</artifactId>
+    <artifactId>FlowerStore</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -16,7 +16,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
+            <version>RELEASE</version>
+            <scope>compile</scope>     
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -31,5 +32,15 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+ 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
