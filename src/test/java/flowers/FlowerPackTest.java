@@ -16,8 +16,8 @@ class FlowerPackTest {
     }
 
     @org.junit.jupiter.api.Test
-    void price() {
-        assertEquals(450, pack.price());
+    void getPrice() {
+        assertEquals(450, pack.getPrice());
     }
 
     @org.junit.jupiter.api.Test

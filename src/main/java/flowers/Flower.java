@@ -6,13 +6,18 @@ import lombok.ToString;
 import java.util.Arrays;
 
 @ToString
-public class Flower {
+public class Flower extends Item {
     @Getter
     private int[] color = new int[5];
     @Getter @Setter
     private double sepalLength;
     @Getter @Setter
     private double price;
+
+    @Override
+    public String getDescription() {
+        return "Flower of type " + flowerType;
+    }
 
     public Flower(FlowerType flowerType) {
         this.flowerType = flowerType;

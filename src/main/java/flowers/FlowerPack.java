@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter @AllArgsConstructor
-public class FlowerPack {
+public class FlowerPack extends Item {
     private Flower flower;
     private int amount;
 
@@ -14,7 +14,12 @@ public class FlowerPack {
     public FlowerPack(Flower flower) {
         this.flower = flower;
     }
-    public double price() {
+
+    public double getPrice() {
         return flower.getPrice() * amount;
+    }
+
+    public String getDescription() {
+        return "FlowerBucket";
     }
 }
