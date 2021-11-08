@@ -1,10 +1,14 @@
+package orders;
+
 import delivery.Delivery;
 import flowers.Item;
 import lombok.Getter;
 import lombok.Setter;
 import payment.Payment;
+import users.User;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Order {
     @Getter @Setter
@@ -13,6 +17,8 @@ public class Order {
     private Payment payment;
     @Getter
     private Delivery delivery;
+
+    private List<User> users;
 
     public void setPaymentStrategy(Payment newPayment) {
         this.payment = newPayment;
@@ -44,4 +50,17 @@ public class Order {
         this.items.remove(toRemove);
     }
 
+    public void addUser(User toAdd) {
+        users.add(toAdd);
+    }
+
+    public void removeUser(User toRemove) {
+        users.remove(toRemove);
+    }
+
+    public void notifyUsers() {
+        for (User user: users) {
+            user.update("The package was sent");
+        }
+    }
 }

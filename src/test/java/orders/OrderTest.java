@@ -1,13 +1,14 @@
-import delivery.Delivery;
+package orders;
+
 import delivery.PostDeliveryStrategy;
 import flowers.Flower;
 import flowers.FlowerPack;
 import flowers.FlowerType;
 import flowers.Item;
+import orders.Order;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import payment.CreditCardPaymentStrategy;
-import payment.Payment;
 
 import java.util.LinkedList;
 
