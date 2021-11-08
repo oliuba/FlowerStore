@@ -20,10 +20,6 @@ public class Order {
 
     private List<User> users;
 
-    public List<User> getUsers() {
-        return users;
-    }
-
     public void setPaymentStrategy(Payment newPayment) {
         this.payment = newPayment;
     }
@@ -63,8 +59,8 @@ public class Order {
     }
 
     public void notifyUsers() {
-        for (int i = 0; i < getUsers().size(); i++) {
-            getUsers().get(i).update("The package was sent");
+        for (User user: users) {
+            user.update("The package was sent");
         }
     }
 }
